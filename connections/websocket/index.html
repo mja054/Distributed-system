@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+
+<script>
+    // Connect to the WebSocket server
+    const socket = io.connect('http://127.0.0.1:5000');
+
+    // Send a message to the server
+    socket.emit('message_from_client', 'Hello, Server!');
+
+    // Receive messages from the server
+    socket.on('message_from_server', function (message) {
+        console.log('Received message from server:', message);
+    });
+</script>
+
+</body>
+</html>
+

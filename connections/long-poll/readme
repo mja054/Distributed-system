@@ -1,0 +1,4 @@
+Save the server-side code in a file (e.g., server.py) and the client-side code in another file (e.g., client.py).
+Install Flask by running pip install Flask in your terminal.
+Run the server using python server.py in one terminal window.
+Run the client using python client.py in another terminal window.
